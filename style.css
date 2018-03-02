@@ -1,0 +1,170 @@
+body {
+	padding: 0;
+	margin: 0;
+	border: none;
+
+	color: #dddddd;
+	background-color: #34353b;
+
+	font-family: Arial;
+	font-size: 16px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	text-align: left;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	white-space: nowrap;
+}
+
+::selection {
+	color: #ffffff;
+	background-color: #9ab592;
+	text-shadow: none;
+}
+::-moz-selection {
+	color: #ffffff ;
+	background-color: #9ab592;
+	text-shadow: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-weight: bold;
+	line-height: 1.5em;
+	position: relative;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+}
+
+p {
+	line-height: 1.5em;
+}
+p+p {
+	margin-top: 0.5em;
+}
+h1+p,h2+p,
+h1+ul,h2+ul {
+	margin-top: 0.5em;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+a {
+	color: #ffffff;
+	cursor: pointer;
+	text-decoration: underline;
+	transition: color 0.125s ease-in-out 0s;
+}
+a:hover {
+	color: #9ab592;
+}
+a.no_underline {
+	text-decoration: none;
+}
+
+.github {
+	position: relative;
+	float: right;
+	z-index: 1;
+	line-height: 1.5em;
+	padding-top: 0.5em;
+}
+.github_link {
+	color: #a0a0a0;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+}
+.github_link:hover {
+}
+
+.main_aligner {
+	height: 100%;
+	width: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+.main {
+	position: relative;
+	width: 100%;
+	white-space: nowrap;
+	line-height: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+.main_vsize {
+	display: inline-block;
+	vertical-align: top;
+	height: 16em;
+	height: 50vh;
+	width: 0;
+}
+.main_hsize {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	white-space: normal;
+	line-height: normal;
+}
+.main_inner {
+	position: relative;
+	width: 62em;
+	max-width: 100%;
+	padding: 1em 0;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.top,
+.content {
+	margin: 0 1em;
+	position: relative;
+}
+.top {
+	padding-bottom: 1em;
+}
+
+.light {
+	color: #a0a0a0;
+	display: inline-block;
+}
+
+.info_table {
+	display: table;
+}
+.info_table_cell {
+	display: table-cell;
+}
+.info_table_cell:nth-of-type(2) {
+	padding-left: 2em;
+}
+
+
+@media screen and (max-width: 800px) {
+	.info_table {
+		display: block;
+	}
+	.info_table_cell {
+		display: block;
+	}
+	.info_table_cell:nth-of-type(2) {
+		padding-left: 0;
+	}
+}
+
