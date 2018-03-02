@@ -1,0 +1,26 @@
+{
+	"name": "X-Port",
+	"version": "1.0.0",
+	"author": "dnsev-h",
+	"description": "Export your favorites on E*Hentai",
+	"dependencies": {
+		"html-minifier": "~0.6.9",
+		"clean-css": "~3.4.4",
+		"complexion": "~0.1.3",
+		"complexion-js": "~0.1.5"
+	},
+	"devDependencies": {},
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/dnsev-h/x-port.git"
+	},
+	"keywords": [
+		"userscript"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/dnsev-h/x-port/issues"
+	},
+	"homepage": "https://dnsev-h.github.io/x-port/"
+}

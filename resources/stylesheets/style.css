@@ -1,0 +1,127 @@
+.xport_info_box {
+	width: 50%;
+	margin: 0.5em auto 0;
+	padding: 0;
+	border-radius: 3px;
+	background-color: #e3e0d1;
+	border: 1px solid #5c0d12;
+	text-align: left;
+	overflow: hidden;
+}
+:root.xport_ex .xport_info_box {
+	border-radius: 0;
+	background-color: #43464e;
+	border: 1px solid #aeaeae;
+}
+
+.xport_info_header {
+	padding: 0.25em 0.25em 0.125em 0.25em;
+	position: relative;
+}
+.xport_info_header_content {
+	font-weight: bold;
+	position: relative;
+}
+.xport_info_header_title {
+}
+.xport_info_header_status {
+}
+.xport_info_header_status.xport_info_header_status_hidden {
+	display: none;
+}
+
+.xport_info_progress_container1 {
+	position: absolute;
+	left: 9em;
+	top: 0.2em;
+	bottom: 0.2em;
+	right: 0.2em;
+	background-color: #f2f0e4;
+	border: 1px solid #ceb6b7;
+}
+.xport_info_progress_container2 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	border: 1px solid #ffffff;
+}
+.xport_info_progress {
+	background-color: #ceb6b7;
+	width: 0;
+	height: 100%;
+}
+
+:root.xport_ex .xport_info_progress_container1 {
+	background-color: #43464e;
+	border-color: #34353b;
+}
+:root.xport_ex .xport_info_progress_container2 {
+	border: 1px solid #4f535b;
+}
+:root.xport_ex .xport_info_progress {
+	background-color: #34353b;
+}
+
+.xport_info_content {
+	padding: 0.125em 0.25em 0.25em 0.25em;
+	position: relative;
+}
+.xport_info_content_links {
+	position: relative;
+}
+.xport_info_content_link {
+	text-decoration: none;
+	cursor: pointer;
+}
+.xport_info_content_text {
+}
+
+.xport_info_textarea_container {
+	display: block;
+}
+.xport_info_textarea_container.xport_info_textarea_container_hidden {
+	display: none;
+}
+.xport_info_textarea_line_container {
+	margin: 0;
+}
+.xport_info_textarea_line {
+	border-top: 1px solid #ceb6b7;
+}
+:root.xport_ex .xport_info_textarea_line {
+	border-top: 1px solid #aeaeae;
+}
+
+textarea.xport_info_textarea {
+	margin: 0;
+	padding: 0.25em;
+	border: 0;
+	resize: vertical;
+	width: 100%;
+	height: 5.5em;
+	min-height: 3em;
+	line-height: 1.25em;
+	font-size: 1em;
+	font-family: inherit;
+	border-radius: 0;
+	box-sizing: border-box;
+	display: block;
+	white-space: pre;
+	overflow-wrap: normal;
+	overflow: auto;
+}
+textarea.xport_info_textarea,
+textarea.xport_info_textarea:hover,
+textarea.xport_info_textarea:active,
+textarea.xport_info_textarea:focus {
+	background-color: #f2f0e4;
+}
+
+:root.xport_ex textarea.xport_info_textarea,
+:root.xport_ex textarea.xport_info_textarea:hover,
+:root.xport_ex textarea.xport_info_textarea:active,
+:root.xport_ex textarea.xport_info_textarea:focus {
+	background-color: #34353b;
+}
