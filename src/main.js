@@ -1,5 +1,5 @@
 /* jshint eqnull:true, noarg:true, noempty:true, eqeqeq:true, bitwise:false, strict:true, undef:true, curly:false, browser:true, devel:true, newcap:false, maxerr:50, esnext:true */
-(function (window) {
+(function (window, _GM) {
 	"use strict";
 
 	// Greasemonkey 4 compatibility
@@ -15,8 +15,7 @@
 			});
 		};
 	};
-	const GM = (() => {
-		let GM = this.GM;
+	const GM = ((GM) => {
 		if (GM !== null && typeof(GM) === "object") {
 			return GM;
 		}
@@ -33,7 +32,7 @@
 		}
 
 		return GM;
-	})();
+	})(_GM);
 
 	/*#{begin_debug:timing=true}#*/
 
@@ -638,4 +637,4 @@
 
 	$.ready(main);
 
-}).call(this, window);
+}).call(this, window, (() => { try { return GM; } catch (e) { return undefined; } })());
