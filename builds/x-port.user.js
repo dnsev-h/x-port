@@ -2,7 +2,7 @@
 // @name        X-Port
 // @namespace   dnsev-h
 // @author      dnsev-h
-// @version     1.0.0
+// @version     1.0.1
 // @description Export favorites on E*Hentai
 // @include     https://exhentai.org/*
 // @include     https://e-hentai.org/*
@@ -17,7 +17,7 @@
 // @grant       none
 // @run-at      document-start
 // ==/UserScript==
-(function (window) {
+(function (window, _GM) {
 	"use strict";
 
 	// Greasemonkey 4 compatibility
@@ -33,8 +33,7 @@
 			});
 		};
 	};
-	const GM = (() => {
-		let GM = this.GM;
+	const GM = ((GM) => {
 		if (GM !== null && typeof(GM) === "object") {
 			return GM;
 		}
@@ -51,7 +50,7 @@
 		}
 
 		return GM;
-	})();
+	})(_GM);
 
 	/*#{begin_debug:timing=true}#*/
 
@@ -461,9 +460,9 @@
 			_parseHTML(html) {
 				let info = new EHAPI.IndexPageInfo(null);
 
-				let elements = $.all(".itg>.id1>.id2>a[href]", html);
+				let elements = $.all(".itg .glname a[href]", html);
 				if (elements.length === 0) {
-					elements = $.all(".itg tr>.itd>div>.it5>a[href]", html);
+					elements = $.all(".itg.glte tr>td.gl2e>div>a[href]", html);
 				}
 
 				for (let i = 0, ii = elements.length; i < ii; ++i) {
@@ -624,7 +623,7 @@
 		Exporter.current = null;
 
 		const setupFavorites = () => {
-			const button = $("input[name=f_clear]", de);
+			const button = $("input[type=button][value=Clear]", de);
 			if (button !== null) {
 				const exportButton = $.node("input", null, { type: "button", value: "Export..." });
 				$.after(null, button, [ $.text(" "), exportButton ]);
@@ -656,4 +655,4 @@
 
 	$.ready(main);
 
-}).call(this, window);
+}).call(this, window, (() => { try { return GM; } catch (e) { return undefined; } })());

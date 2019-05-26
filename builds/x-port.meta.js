@@ -2,7 +2,7 @@
 // @name        X-Port
 // @namespace   dnsev-h
 // @author      dnsev-h
-// @version     1.0.0
+// @version     1.0.1
 // @description Export favorites on E*Hentai
 // @include     https://exhentai.org/*
 // @include     https://e-hentai.org/*
