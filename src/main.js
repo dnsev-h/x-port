@@ -442,9 +442,9 @@
 			_parseHTML(html) {
 				let info = new EHAPI.IndexPageInfo(null);
 
-				let elements = $.all(".itg>.id1>.id2>a[href]", html);
+				let elements = $.all(".itg .glname a[href]", html);
 				if (elements.length === 0) {
-					elements = $.all(".itg tr>.itd>div>.it5>a[href]", html);
+					elements = $.all(".itg.glte tr>td.gl2e>div>a[href]", html);
 				}
 
 				for (let i = 0, ii = elements.length; i < ii; ++i) {
@@ -605,7 +605,7 @@
 		Exporter.current = null;
 
 		const setupFavorites = () => {
-			const button = $("input[name=f_clear]", de);
+			const button = $("input[type=button][value=Clear]", de);
 			if (button !== null) {
 				const exportButton = $.node("input", null, { type: "button", value: "Export..." });
 				$.after(null, button, [ $.text(" "), exportButton ]);
