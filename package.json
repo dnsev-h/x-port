@@ -5,7 +5,7 @@
 	"description": "Export your favorites on E*Hentai",
 	"dependencies": {
 		"html-minifier": "~0.6.9",
-		"clean-css": "~3.4.4",
+		"clean-css": "~4.1.11",
 		"complexion": "~0.1.3",
 		"complexion-js": "~0.1.5"
 	},
